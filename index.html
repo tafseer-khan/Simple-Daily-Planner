@@ -4,8 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Daily-Planner</title>
+    <script src="https://rawgit.com/moment/moment/2.2.1/min/moment.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    
 </head>
 <body>
+    <h1>Work Day Scheduler</h1>
+    <h1 id="Date"></h1>
+    <hr id="9">  09AM <input  id ="task" class = "task-1"type="text"></input><button id="save">Save</button>
+    <hr id="10"> 10AM <input id ="task"class = "task-2" type="text"></input><button id="save">Save</button>
+    <hr id="11"> 11AM <input id ="task"class = "task-3" type="text"></input><button id="save">Save</button>
+    <hr id="12"> 12PM <input id ="task"class = "task-4" type="text"></input><button id="save">Save</button>
+    <hr id="13">  01PM <input id ="task"class = "task-5" type="text"></input><button id="save">Save</button>
+    <hr id="14">  02PM <input id ="task"class = "task-6" type="text"></input><button id="save">Save</button>
+    <hr id="15">  03PM <input id ="task"class = "task-7" type="text"></input><button id="save">Save</button>
+    <hr id="16">  04PM <input id ="task"class = "task-8" type="text"></input><button id="save">Save</button>
+    <hr id="17">  05PM <input id ="task"class = "task-9" type="text"></input><button id="save">Save</button>
+    <hr>
+    <script>
+        $('#Date').text(moment().format('MMMM Do YYYY, dddd'));
+    </script>
     
 </body>
 </html>
