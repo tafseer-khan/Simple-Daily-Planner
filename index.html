@@ -12,18 +12,25 @@
 <body>
     <h1>Work Day Scheduler</h1>
     <h1 id="Date"></h1>
-    <hr id="9">  09AM <input  id ="task" class = "task-1"type="text"></input><button id="save">Save</button>
-    <hr id="10"> 10AM <input id ="task"class = "task-2" type="text"></input><button id="save">Save</button>
-    <hr id="11"> 11AM <input id ="task"class = "task-3" type="text"></input><button id="save">Save</button>
-    <hr id="12"> 12PM <input id ="task"class = "task-4" type="text"></input><button id="save">Save</button>
-    <hr id="13">  01PM <input id ="task"class = "task-5" type="text"></input><button id="save">Save</button>
-    <hr id="14">  02PM <input id ="task"class = "task-6" type="text"></input><button id="save">Save</button>
-    <hr id="15">  03PM <input id ="task"class = "task-7" type="text"></input><button id="save">Save</button>
-    <hr id="16">  04PM <input id ="task"class = "task-8" type="text"></input><button id="save">Save</button>
-    <hr id="17">  05PM <input id ="task"class = "task-9" type="text"></input><button id="save">Save</button>
-    <hr>
+    <hr>  09AM <input value="" id ="9" class ="am task"type="text"></input><button id="save_9"class="save">Save</button></hr>
+    <hr> 10AM <input value="" id ="10"class ="am task"type="text"></input><button id="save_10"class="save">Save</button></hr>
+    <hr> 11AM <input value="" id ="11"class ="am task"type="text"></input><button id="save_11"class="save">Save</button></hr>
+    <hr> 12PM <input value="" id ="12"class ="am task" type="text"></input><button id="save_12"class="save">Save</button></hr>
+    <hr>  01PM <input value="" id ="1"class ="am task"type="text"></input><button id="save_1"class="save">Save</button></hr>
+    <hr>  02PM <input value="" id ="2"class ="am task"type="text"></input><button id="save_2"class="save">Save</button></hr>
+    <hr>  03PM <input value="" id ="3"class ="am task"type="text"></input><button id="save_3"class="save">Save</button></hr>
+    <hr>  04PM <input value="" id ="4"class ="am task"type="text"></input><button id="save_4"class="save">Save</button></hr>
+    <hr>  05PM <input value="" id ="5"class ="am task"type="text"></input><button id="save_5"class="save">Save</button></hr>
     <script>
         $('#Date').text(moment().format('MMMM Do YYYY, dddd'));
+        var avp = moment().format('a')
+        var hour = moment().format('h')
+        var tasks = document.getElementById(task);
+        console.log()
+        if(avp == 'pm'){
+            // if()
+            
+        }
     </script>
     
 </body>

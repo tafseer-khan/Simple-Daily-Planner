@@ -2,14 +2,17 @@ h1{
     text-align: center;
 
 }
-#task{
+.task{
     width: 94%;
     margin-left: .01%;
     height:30px;
 }
-#save{
+.save{
     margin-left: .1%;
     background-color: rgb(115, 113, 228);
     height: 35px;
     font-weight: bolder;
+}
+.task{
+    background-color: gray;
 }
