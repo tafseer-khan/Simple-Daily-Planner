@@ -23,31 +23,58 @@
     <hr>  04PM <input value="" id ="4"class ="pm task"type="text"></input><button id="save_4"class="save">Save</button></hr>
     <hr>  05PM <input value="" id ="5"class ="pm task"type="text"></input><button id="save_5"class="save">Save</button></hr>
     <script>
+        $("#9").val(localStorage.getItem('9'))
+        $("#10").val(localStorage.getItem('10'))
+        $("#11").val(localStorage.getItem('11'))
+        $("#12").val(localStorage.getItem('12'))
+        $("#1").val(localStorage.getItem('1'))
+        $("#2").val(localStorage.getItem('2'))
+        $("#3").val(localStorage.getItem('3'))
+        $("#4").val(localStorage.getItem('4'))
+        $("#5").val(localStorage.getItem('5'))
         $('#Date').text(moment().format('MMMM Do YYYY, dddd'));
         var avp = moment().format('a')
         var hour = moment().format('h')
-        console.log($('#9').val())
-        console.log(avp)
         if(avp =="am"){
             if(hour=="9"){
                 $("#9").css("backgroundColor","red");
                 $("#10").css("backgroundColor","green");
                 $("#11").css("backgroundColor","green");
+                $("#12").css("backgroundColor","green");
+                $("#1").css("backgroundColor","green");
+                $("#2").css("backgroundColor","green");
+                $("#3").css("backgroundColor","green");
+                $("#4").css("backgroundColor","green");
+                $("#5").css("backgroundColor","green");
+                
 
             }
             if(hour=="10"){
                 $("#10").css("backgroundColor","red");
+                $("#12").css("backgroundColor","green");
                 $("#11").css("backgroundColor","green");
+                $("#1").css("backgroundColor","green");
+                $("#2").css("backgroundColor","green");
+                $("#3").css("backgroundColor","green");
+                $("#4").css("backgroundColor","green");
+                $("#5").css("backgroundColor","green");
                 
             }
             if(hour=="11"){
                 $("#11").css("backgroundColor","red");
+                $("#12").css("backgroundColor","green");
+                $("#1").css("backgroundColor","green");
+                $("#2").css("backgroundColor","green");
+                $("#3").css("backgroundColor","green");
+                $("#4").css("backgroundColor","green");
+                $("#5").css("backgroundColor","green");
             }
 
         }
         if(avp == 'pm'){
             if(hour=="12"){
                 $("#12").css("backgroundColor","red");
+                $("#12").css("backgroundColor","green");
                 $("#1").css("backgroundColor","green");
                 $("#2").css("backgroundColor","green");
                 $("#3").css("backgroundColor","green");
@@ -82,13 +109,43 @@
 
             
         }
-
         $('#save_9').on('click',(function save(){
             var task_9 = document.getElementById("9").value;
-            console.log(task_9);
             localStorage.setItem('9', task_9)
-            console.log(localStorage.getItem('9'))
         }))
+        $('#save_10').on('click',(function save(){
+            var task_10 = document.getElementById("10").value;
+            localStorage.setItem('10', task_10)
+        }))
+        $('#save_11').on('click',(function save(){
+            var task_11 = document.getElementById("11").value;
+            localStorage.setItem('11', task_11)
+        }))
+        $('#save_12').on('click',(function save(){
+            var task_12 = document.getElementById("12").value;
+            localStorage.setItem('12', task_12)
+        }))
+        $('#save_1').on('click',(function save(){
+            var task_1 = document.getElementById("1").value;
+            localStorage.setItem('1', task_1)
+        }))
+        $('#save_2').on('click',(function save(){
+            var task_2 = document.getElementById("2").value;
+            localStorage.setItem('2', task_2)
+        }))
+        $('#save_3').on('click',(function save(){
+            var task_3 = document.getElementById("3").value;
+            localStorage.setItem('3', task_3)
+        }))
+        $('#save_4').on('click',(function save(){
+            var task_4 = document.getElementById("4").value;
+            localStorage.setItem('4', task_4)
+        }))
+        $('#save_5').on('click',(function save(){
+            var task_5 = document.getElementById("5").value;
+            localStorage.setItem('5', task_5)
+        }))
+        
     </script>
     
 </body>
