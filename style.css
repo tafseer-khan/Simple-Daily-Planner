@@ -5,7 +5,7 @@ h1{
 .task{
     width: 94%;
     margin-left: .01%;
-    height:30px;
+    height:50px;
     padding-top: 1%;
     padding-bottom: 1%;
 }
@@ -17,5 +17,5 @@ h1{
     
 }
 .task{
-    background-color: gray;
+    background-color: rgb(199, 199, 199);
 }

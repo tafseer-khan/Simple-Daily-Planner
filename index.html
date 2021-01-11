@@ -13,6 +13,7 @@
 <body>
     <h1>Work Day Scheduler</h1>
     <h1 id="Date"></h1>
+    <!-- Time, input box, and save button all assigned for each working hour -->
     <hr>  09AM <input value="" id ="9" class ="am task"type="text"></input><button id="save_9"class="save">Save</button></hr>
     <hr> 10AM <input value="" id ="10"class ="am task"type="text"></input><button id="save_10"class="save">Save</button></hr>
     <hr> 11AM <input value="" id ="11"class ="am task"type="text"></input><button id="save_11"class="save">Save</button></hr>
@@ -23,6 +24,7 @@
     <hr>  04PM <input value="" id ="4"class ="pm task"type="text"></input><button id="save_4"class="save">Save</button></hr>
     <hr>  05PM <input value="" id ="5"class ="pm task"type="text"></input><button id="save_5"class="save">Save</button></hr>
     <script>
+    // Values for tasks will be pulled from local storage
         $("#9").val(localStorage.getItem('9'))
         $("#10").val(localStorage.getItem('10'))
         $("#11").val(localStorage.getItem('11'))
@@ -32,9 +34,13 @@
         $("#3").val(localStorage.getItem('3'))
         $("#4").val(localStorage.getItem('4'))
         $("#5").val(localStorage.getItem('5'))
+    // The date is pulled from moment API and is returned as our Header
         $('#Date').text(moment().format('MMMM Do YYYY, dddd'));
+    // avp stands for am vs pm which will store am or pm depending on time of day
         var avp = moment().format('a')
+    // The hour is stored
         var hour = moment().format('h')
+    // Depending on the time of the day (morning vs afternoon and hours) the input blocks will display a different background color
         if(avp =="am"){
             if(hour=="9"){
                 $("#9").css("backgroundColor","red");
@@ -109,6 +115,7 @@
 
             
         }
+    // Once a button is clicked value in input box is stored to local storage with identifier for each time
         $('#save_9').on('click',(function save(){
             var task_9 = document.getElementById("9").value;
             localStorage.setItem('9', task_9)
