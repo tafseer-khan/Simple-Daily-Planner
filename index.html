@@ -4,9 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Daily-Planner</title>
+    <link rel="stylesheet" href="style.css">
     <script src="https://rawgit.com/moment/moment/2.2.1/min/moment.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-    <link rel="stylesheet" href="style.css">
+
     
 </head>
 <body>
@@ -15,22 +16,79 @@
     <hr>  09AM <input value="" id ="9" class ="am task"type="text"></input><button id="save_9"class="save">Save</button></hr>
     <hr> 10AM <input value="" id ="10"class ="am task"type="text"></input><button id="save_10"class="save">Save</button></hr>
     <hr> 11AM <input value="" id ="11"class ="am task"type="text"></input><button id="save_11"class="save">Save</button></hr>
-    <hr> 12PM <input value="" id ="12"class ="am task" type="text"></input><button id="save_12"class="save">Save</button></hr>
-    <hr>  01PM <input value="" id ="1"class ="am task"type="text"></input><button id="save_1"class="save">Save</button></hr>
-    <hr>  02PM <input value="" id ="2"class ="am task"type="text"></input><button id="save_2"class="save">Save</button></hr>
-    <hr>  03PM <input value="" id ="3"class ="am task"type="text"></input><button id="save_3"class="save">Save</button></hr>
-    <hr>  04PM <input value="" id ="4"class ="am task"type="text"></input><button id="save_4"class="save">Save</button></hr>
-    <hr>  05PM <input value="" id ="5"class ="am task"type="text"></input><button id="save_5"class="save">Save</button></hr>
+    <hr> 12PM <input value="" id ="12"class ="pm task" type="text"></input><button id="save_12"class="save">Save</button></hr>
+    <hr>  01PM <input value="" id ="1"class ="pm task"type="text"></input><button id="save_1"class="save">Save</button></hr>
+    <hr>  02PM <input value="" id ="2"class ="pm task"type="text"></input><button id="save_2"class="save">Save</button></hr>
+    <hr>  03PM <input value="" id ="3"class ="pm task"type="text"></input><button id="save_3"class="save">Save</button></hr>
+    <hr>  04PM <input value="" id ="4"class ="pm task"type="text"></input><button id="save_4"class="save">Save</button></hr>
+    <hr>  05PM <input value="" id ="5"class ="pm task"type="text"></input><button id="save_5"class="save">Save</button></hr>
     <script>
         $('#Date').text(moment().format('MMMM Do YYYY, dddd'));
         var avp = moment().format('a')
         var hour = moment().format('h')
-        var tasks = document.getElementById(task);
-        console.log()
+        console.log($('#9').val())
+        console.log(avp)
+        if(avp =="am"){
+            if(hour=="9"){
+                $("#9").css("backgroundColor","red");
+                $("#10").css("backgroundColor","green");
+                $("#11").css("backgroundColor","green");
+
+            }
+            if(hour=="10"){
+                $("#10").css("backgroundColor","red");
+                $("#11").css("backgroundColor","green");
+                
+            }
+            if(hour=="11"){
+                $("#11").css("backgroundColor","red");
+            }
+
+        }
         if(avp == 'pm'){
-            // if()
+            if(hour=="12"){
+                $("#12").css("backgroundColor","red");
+                $("#1").css("backgroundColor","green");
+                $("#2").css("backgroundColor","green");
+                $("#3").css("backgroundColor","green");
+                $("#4").css("backgroundColor","green");
+                $("#5").css("backgroundColor","green");
+            }
+            if(hour=="1"){
+                $("#1").css("backgroundColor","red");
+                $("#2").css("backgroundColor","green");
+                $("#3").css("backgroundColor","green");
+                $("#4").css("backgroundColor","green");
+                $("#5").css("backgroundColor","green");
+            }
+            if(hour=="2"){
+                $("#2").css("backgroundColor","red");
+                $("#3").css("backgroundColor","green");
+                $("#4").css("backgroundColor","green");
+                $("#5").css("backgroundColor","green");
+            }
+            if(hour=="3"){
+                $("#3").css("backgroundColor","red");
+                $("#4").css("backgroundColor","green");
+                $("#5").css("backgroundColor","green");
+            }
+            if(hour=="4"){
+                $("#3").css("backgroundColor","red"); 
+                $("#5").css("backgroundColor","green");
+            }
+            if(hour=="5"){
+                $("#5").css("backgroundColor","red");
+            }
+
             
         }
+
+        $('#save_9').on('click',(function save(){
+            var task_9 = document.getElementById("9").value;
+            console.log(task_9);
+            localStorage.setItem('9', task_9)
+            console.log(localStorage.getItem('9'))
+        }))
     </script>
     
 </body>
